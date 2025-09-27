@@ -16,7 +16,8 @@
     <h3 id="play-btn" style="cursor:pointer;">Play</h3>
   </div>
   <div id="game-screen" style="display:none;">
-    
+  <div class="bg-img" id="bg1"></div>
+  <div class="bg-img" id="bg2"></div>
   </div>
 </body>
 <script>
@@ -24,5 +25,27 @@
     document.getElementById('title-screen').style.display = 'none';
     document.getElementById('game-screen').style.display = 'block';
   };
+
+  // Seamless background scroll
+  const bg1 = document.getElementById('bg1');
+  const bg2 = document.getElementById('bg2');
+  const bgWidth = 1536; // px
+  let x1 = 0;
+  let x2 = bgWidth;
+  function animateBG() {
+    x1 -= 2; // speed in px per frame
+    x2 -= 2;
+    if (x1 <= -bgWidth) x1 = x2 + bgWidth;
+    if (x2 <= -bgWidth) x2 = x1 + bgWidth;
+    bg1.style.left = x1 + 'px';
+    bg2.style.left = x2 + 'px';
+    requestAnimationFrame(animateBG);
+  }
+  // Start animation when game screen is shown
+  document.getElementById('play-btn').addEventListener('click', function() {
+    x1 = 0;
+    x2 = bgWidth;
+    animateBG();
+  });
 </script>
 </html>

@@ -3,6 +3,14 @@ body{
     background-color: black;
     color: white;
 }
+#game-screen {
+  background-image: url(images/Background1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
 h1{
     color:rgb(2, 172, 50);
     font-size: 65px;
@@ -12,14 +20,15 @@ h1{
 }
 
 h2{
-    color: rgb(4, 255, 42);
-    font-size: 30px;
-    font-family: 'Press Start 2P';
-    text-align: center;
+  color:rgb(1, 255, 1);
+  font-size:40px;
+  font-family: 'Press Start 2P';
+  text-align: center;
 }
 
+
 h3{
-    color:rgb(255, 255, 255)
+    color:rgb(255, 255, 255);
     font-size: 30px;
     font-family: 'Press Start 2P';
     text-align: center;
@@ -34,3 +43,10 @@ h3{
   }
 }
 
+#game-screen {
+  background-image: url(images/Background1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
